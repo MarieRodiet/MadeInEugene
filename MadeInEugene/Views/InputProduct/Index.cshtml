@@ -1,0 +1,68 @@
+﻿@model Product
+
+@{
+    ViewData["Title"] = "Product";
+}
+<div class="text-center p-3 m-3">
+    <h1>Enter information about products that are produced in Eugene! </h1>
+</div>
+
+<div class="container">
+    <form asp-action="Index" method="post" class="container form-horizontal">
+        <!--line 21 allows for all ErrorMessages from the model to be listed together-->
+        <div asp-validation-summary="All"></div>
+
+        <div class="row">
+            <label asp-for="NameOfProduct" class="control-label col-sm-3">Name Of Product</label>
+            <input asp-for="NameOfProduct" type="text" class="form-control col-sm-6">
+        </div>
+        <br />
+        <div class="row">
+            <label asp-for="Rating" class="control-label col-sm-3">Rating</label>
+            <input asp-for="Rating" type="number" class="form-control col-sm-6">
+        </div>
+        <br />
+        <div class="row">
+            <label asp-for="Review" class="control-label col-sm-3">Review</label>
+            <textarea asp-for="Review" type="text" class="form-control col-sm-6" rows="3"></textarea>
+        </div>
+        <br />
+        <div class="row">
+            <label asp-for="Company.NameOfCompany" class="control-label col-sm-3">Company name</label>
+            <input asp-for="Company.NameOfCompany" type="text" class="form-control col-sm-6">
+        </div>
+        <br />
+        <div class="row">
+            <label asp-for="Company.contactInfo" class="control-label col-sm-3">Company contact info</label>
+            <input asp-for="Company.contactInfo" type="text" class="form-control col-sm-6">
+        </div>
+        <br />
+
+        <button type="submit" btn btn-outline-primary p-3>Submit</button>
+    </form>
+
+</div>@if (Model != null)
+{
+
+<div class="jumbotron mt-2">
+    <h3>Newly Added Product:</h3>
+
+    <h6>Name of Product</h6>
+    <p>@Model.NameOfProduct</p>
+
+    <h6>Rating</h6>
+    <p>@Model.Rating</p>
+
+    <h6>Review</h6>
+    <p>@Model.Review</p>
+
+    <h6>Company</h6>
+    <p>@Model.Company.NameOfCompany</p>
+
+    <h6>Company Name</h6>
+    <p>@Model.Company.contactInfo.</p>
+
+
+</div>
+
+}

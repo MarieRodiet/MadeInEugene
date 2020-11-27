@@ -1,0 +1,43 @@
+﻿
+@model Product
+
+@{
+    ViewData["Title"] = "Edit a Review";
+}
+
+<h2>Edit a Product</h2>
+
+<div class="container">
+    <form asp-action="Edit" method="post" class="container form-horizontal">
+        <!--line 21 allows for all ErrorMessages from the model to be listed together-->
+        <div asp-validation-summary="All"></div>
+
+        <div class="row">
+            <label asp-for="NameOfProduct" class="control-label col-sm-3">Name Of Product</label>
+            <input asp-for="NameOfProduct" type="text" class="form-control col-sm-6">
+        </div>
+        <br />
+        <div class="row">
+            <label asp-for="Rating" class="control-label col-sm-3">Rating</label>
+            <input asp-for="Rating" type="number" class="form-control col-sm-6">
+        </div>
+        <br />
+        <div class="row">
+            <label asp-for="Review" class="control-label col-sm-3">Review</label>
+            <textarea asp-for="Review" type="text" class="form-control col-sm-6" rows="3"></textarea>
+        </div>
+        <br />
+        <div class="row">
+            <label asp-for="Company.NameOfCompany" class="control-label col-sm-3">Company name</label>
+            <input asp-for="Company.NameOfCompany" type="text" class="form-control col-sm-6">
+        </div>
+        <br />
+        <div class="row">
+            <label asp-for="Company.contactInfo" class="control-label col-sm-3">Company contact info</label>
+            <input asp-for="Company.contactInfo" type="text" class="form-control col-sm-6">
+        </div>
+        <br />
+
+        <button type="submit" btn btn-outline-primary p-3>Submit</button>
+    </form>
+</div>

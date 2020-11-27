@@ -1,0 +1,51 @@
+﻿@model List<Product>
+@{
+    ViewData["Title"] = "List of Products";
+}
+
+<div class="text-center p-3 m-3">
+    <h1>View a list of Products Made In Eugene! </h1>
+</div>
+
+<div>
+    <table>
+        <thead>
+            <tr>
+                <th class="col-sm-2">Product Name</th>
+                <th class="col-sm-1">Rating</th>
+                <th class="col-sm-2">Review</th>
+                <th class="col-sm-2">Company</th>
+                <th class="col-sm-2">Contact Info</th>
+                <th class="col-sm-1"></th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(Product product in Model)
+            {
+            <tr>
+                <td class="col-sm-2">
+                    @product.NameOfProduct
+                </td>
+                <td class="col-sm-1">
+                    @product.Rating
+                </td>
+                <td class="col-sm-2">
+                    @product.Review
+                </td>
+                <td class="col-sm-2">
+                    @product.Company.NameOfCompany
+                </td>
+                <td class="col-sm-1">
+                    @product.Company.contactInfo
+                </td>
+                <td>
+                        <a asp-controller="InputProduct" asp-action="Edit" asp-route-id="@product.ProductId" class="btn btn-primary active" role="button">Edit</a>
+                        <a asp-controller="InputProduct" asp-action="Delete" asp-route-id="@product.ProductId" class="btn btn-danger active" role="button">Delete</a>
+                </td>
+
+            </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

@@ -1,26 +1,24 @@
 ﻿<Properties StartupConfiguration="{875BDC4C-9FBD-46A9-AC97-E96B864736AE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MadeInEugene/.gitignore">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MadeInEugene/Views/Shared/_Layout.cshtml">
     <Files>
-      <File FileName="MadeInEugene/Views/Home/Index.cshtml" Line="65" Column="14" />
-      <File FileName="MadeInEugene/Views/Quiz/Index.cshtml" Line="16" Column="1" />
-      <File FileName="MadeInEugene/Views/Ressources/Index.cshtml" Line="9" Column="1" />
-      <File FileName="MadeInEugene/Views/Search/Index.cshtml" Line="6" Column="28" />
-      <File FileName="MadeInEugene/Controllers/HomeController.cs" Line="1" Column="1" />
-      <File FileName="MadeInEugene/Controllers/QuizController.cs" Line="1" Column="1" />
-      <File FileName="MadeInEugene/Controllers/ResourcesController.cs" Line="1" Column="1" />
-      <File FileName="MadeInEugene/Controllers/SearchController.cs" Line="1" Column="1" />
-      <File FileName="MadeInEugene/Views/Shared/_Layout.cshtml" Line="9" Column="4" />
-      <File FileName="MadeInEugene/wwwroot/css/site.css" Line="70" Column="1" />
-      <File FileName="MadeInEugene/.gitignore" Line="254" Column="27" />
+      <File FileName="MadeInEugene/Views/InputProduct/Products.cshtml" Line="1" Column="1" />
+      <File FileName="MadeInEugene/Controllers/InputProductController.cs" Line="1" Column="1" />
+      <File FileName="MadeInEugene/Views/InputProduct/Edit.cshtml" />
+      <File FileName="MadeInEugene/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MadeInEugene" expanded="True">
             <Node name="MadeInEugene" expanded="True">
-              <Node name="Views" expanded="True" />
-              <Node name="wwwroot" expanded="True" />
-              <Node name=".gitignore" selected="True" />
+              <Node name="Controllers" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="InputProduct" expanded="True" />
+                <Node name="Search" expanded="True" />
+                <Node name="Shared" expanded="True">
+                  <Node name="_Layout.cshtml" selected="True" />
+                </Node>
+              </Node>
             </Node>
           </Node>
         </State>
