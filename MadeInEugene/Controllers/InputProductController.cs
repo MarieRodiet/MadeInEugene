@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using MadeInEugene.Models;
+using MadeInEugene.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
@@ -10,13 +11,11 @@ namespace MadeInEugene.Controllers
 {
     public class InputProductController : Controller
     {
+        IProductRepository repo;
 
-        private ProductsCompaniesDbContext context { get; set; }
-
-
-        public InputProductController(ProductsCompaniesDbContext ctx)
+        public InputProductController(ProductRepository r)
         {
-            context = ctx;
+            repo = r;
         }
 
         [HttpGet]
@@ -28,14 +27,14 @@ namespace MadeInEugene.Controllers
         [HttpPost]
         public IActionResult Index(Product product)
         {
-            context.Products.Add(product);
-            context.SaveChanges();
+            repo.AddProduct(product);
             return View(product);
         }
 
         public IActionResult Products()
         {
-            var products = context.Products.Include(product => product.Company).ToList<Product>();
+            //var products = repo.Products.Include(product => product.Company).ToList<Product>();
+            List<Product> products = repo.Products.ToList<Product>();
             return View(products);
         }
 
@@ -45,11 +44,8 @@ namespace MadeInEugene.Controllers
         {
             //var product = context.Products.Find(id);
             //needed to include other model Company to have its name and contact info show up in View
-            var productAndCompany = context.Products
-                .Include(product => product.Company)
-                .Where(product => product.ProductId == id)
-                .First();
-            return View(productAndCompany);
+            var productWithCompany = repo.FindProductById(id);
+            return View(productWithCompany);
         }
 
         [HttpPost]
@@ -59,10 +55,9 @@ namespace MadeInEugene.Controllers
             {
                 //if it is the first product ever entered in the database (id will be 0)
                 if (product.ProductId == 0)
-                    context.Products.Add(product);
+                    repo.AddProduct(product);
                 else
-                    context.Products.Update(product);
-                context.SaveChanges();
+                    repo.UpdateProduct(product);
                 return RedirectToAction("Index", "Home");
             }
             //if invalid data
@@ -75,15 +70,14 @@ namespace MadeInEugene.Controllers
         [HttpGet]
         public IActionResult Delete(int id)
         {
-            var product = context.Products.Find(id);
+            var product = repo.FindProductById(id);
             return View(product);
         }
 
         [HttpPost]
         public IActionResult Delete(Product product)
         {
-            context.Products.Remove(product);
-            context.SaveChanges();
+            repo.DeleteProduct(product);
             return RedirectToAction("Index", "Home");
         }
 

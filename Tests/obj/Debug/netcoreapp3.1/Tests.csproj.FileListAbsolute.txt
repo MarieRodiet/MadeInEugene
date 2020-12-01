@@ -155,6 +155,7 @@
 /Users/user/Desktop/Computer Programming/CS 295N - in progress/term project/MadeInEugene/Tests/bin/Debug/netcoreapp3.1/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
 /Users/user/Desktop/Computer Programming/CS 295N - in progress/term project/MadeInEugene/Tests/bin/Debug/netcoreapp3.1/MadeInEugene.dll
 /Users/user/Desktop/Computer Programming/CS 295N - in progress/term project/MadeInEugene/Tests/bin/Debug/netcoreapp3.1/MadeInEugene.pdb
+/Users/user/Desktop/Computer Programming/CS 295N - in progress/term project/MadeInEugene/Tests/obj/Debug/netcoreapp3.1/Tests.csprojAssemblyReference.cache
 /Users/user/Desktop/Computer Programming/CS 295N - in progress/term project/MadeInEugene/Tests/obj/Debug/netcoreapp3.1/Tests.AssemblyInfoInputs.cache
 /Users/user/Desktop/Computer Programming/CS 295N - in progress/term project/MadeInEugene/Tests/obj/Debug/netcoreapp3.1/Tests.AssemblyInfo.cs
 /Users/user/Desktop/Computer Programming/CS 295N - in progress/term project/MadeInEugene/Tests/obj/Debug/netcoreapp3.1/Tests.csproj.CoreCompileInputs.cache

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Runtime.InteropServices;
 using System.Threading.Tasks;
 using MadeInEugene.Models;
+using MadeInEugene.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -27,6 +28,7 @@ namespace MadeInEugene
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddTransient<IProductRepository, ProductRepository>();
             if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
                 //Assuming that SQL Server is installed on Windows

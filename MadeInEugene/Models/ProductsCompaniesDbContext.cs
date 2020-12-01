@@ -32,17 +32,6 @@ namespace MadeInEugene.Models
 
                  }
                 );
-            /*        modelBuilder.Entity<Product>().HasData(
-                new Product
-                {
-                    ProductId = -1,
-                    NameOfProduct = "Surata Tofu",
-                    Rating = 4,
-                    Review = "great product",
-
-
-
-                });*/
         }
 
     }
