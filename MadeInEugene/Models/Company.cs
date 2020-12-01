@@ -11,7 +11,7 @@ namespace MadeInEugene.Models
         public string NameOfCompany { get; set; }
 
         [Required(ErrorMessage = "Please enter its contact info (email or phone)")]
-        public string contactInfo { get; set; }
+        public string ContactInfo { get; set; }
 
     }
 }

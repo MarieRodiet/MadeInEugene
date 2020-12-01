@@ -22,13 +22,13 @@ namespace MadeInEugene.Models
                 {
                     CompanyId = -1,
                     NameOfCompany = "Nancy's",
-                    contactInfo = "(541) 689-2911"
+                    ContactInfo = "(541) 689-2911"
                 },
                  new Company
                  {
                      CompanyId = -2,
                      NameOfCompany = "Surata Soyfoods Inc",
-                     contactInfo = "(541) 485-6990"
+                     ContactInfo = "(541) 485-6990"
 
                  }
                 );

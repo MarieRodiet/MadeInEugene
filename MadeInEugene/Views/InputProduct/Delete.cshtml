@@ -5,9 +5,10 @@
 }
 <h2>Confirm Deletion</h2>
 <h3>@Model.NameOfProduct</h3>
-<h5>@Model.Company</h5>
 
 <form asp-action="Delete" method="post">
+    <!--bing ProductId to the hidden field, so that the form posts the primary key of the movie to be deleted to the
+        Delete() action in the controller-->
     <input type="hidden" asp-for="ProductId" />
 
     <button type="submit" class="btn btn-danger">Delete</button>

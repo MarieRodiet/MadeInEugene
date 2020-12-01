@@ -19,160 +19,160 @@
     </div>-->
             <label>1. Which uses less water, washing a full load of dishes by hand or in the dishwasher?</label> <br />
             <div class="radio">
-                <label><input type="radio" value="by hand" id="Byhand" name="question1" checked asp-for="Question1">By hand</label>
+                <label><input type="radio" value="by hand" id="Byhand" name="question1" checked asp-for="CorrectOrNot1">By hand</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="dishwasher" id="dishwasher"  name="question1" asp-for="Question1">In the dishwasher</label>
+                <label><input type="radio" value="dishwasher" id="dishwasher"  name="question1" asp-for="CorrectOrNot1">In the dishwasher</label>
             </div>
             <!--If Model is null, ? allows it to display as an empty sting (invisible)-->
-            <p class="answer">@Model?.Answer1</p>
+            <p class="answer">@Model?.UserAnswer1</p>
             <br />
         </div>
 
         <div class="form-group">
-            <label asp-for="Question2">2. What type of supermarket bag is more ecofriendly, paper or plastic?</label><br />
+            <label asp-for="CorrectOrNot2">2. What type of supermarket bag is more ecofriendly, paper or plastic?</label><br />
             <div class="radio">
-                <label><input type="radio" value="paper" id="paper" name="question2" checked asp-for="Question2">Paper</label>
+                <label><input type="radio" value="paper" id="paper" name="question2" checked asp-for="CorrectOrNot2">Paper</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="plastic" id="plastic" name="question2" asp-for="Question2">Plastic</label>
+                <label><input type="radio" value="plastic" id="plastic" name="question2" asp-for="CorrectOrNot2">Plastic</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="bothOfThem" id="bothOfThem" name="question2" asp-for="Question2">Both of them</label>
+                <label><input type="radio" value="bothOfThem" id="bothOfThem" name="question2" asp-for="CorrectOrNot2">Both of them</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="neither" id="neither" name="question2" asp-for="Question2">Neither of them</label>
+                <label><input type="radio" value="neither" id="neither" name="question2" asp-for="CorrectOrNot2">Neither of them</label>
             </div>
             <!--If Model is null, ? allows it to display as an empty sting (invisible)-->
-            <p class="answer">@Model?.Answer2</p>
+            <p class="answer">@Model?.UserAnswer2</p>
             <br />
         </div>
 
         <div class="form-group">
-            <label asp-for="Question3">3. Appliances that are turned off do not use electricity.</label><br />
+            <label asp-for="CorrectOrNot3">3. Appliances that are turned off do not use electricity.</label><br />
             <div class="radio">
-                <label><input type="radio" value="true" id="trueQ3" name="question3" checked asp-for="Question3">True</label>
+                <label><input type="radio" value="true" id="trueQ3" name="question3" checked asp-for="CorrectOrNot3">True</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="false" id="falseQ3" name="question3" asp-for="Question3">False</label>
+                <label><input type="radio" value="false" id="falseQ3" name="question3" asp-for="CorrectOrNot3">False</label>
             </div>
             <!--If Model is null, ? allows it to display as an empty sting (invisible)-->
-            <p class="answer">@Model?.Answer3</p>
+            <p class="answer">@Model?.UserAnswer3</p>
             <br />
         </div>
 
         <div class="form-group">
-            <label asp-for="Question4">4. Hybrid cars are slower and less safe than conventional cars.</label><br />
+            <label asp-for="CorrectOrNot4">4. Hybrid cars are slower and less safe than conventional cars.</label><br />
             <div class="radio">
-                <label><input type="radio" value="true" id ="trueQ4" name="question4" checked asp-for="Question4">True</label>
+                <label><input type="radio" value="true" id ="trueQ4" name="question4" checked asp-for="CorrectOrNot4">True</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="false" id ="falseQ4" name="question4" asp-for="Question4">False</label>
+                <label><input type="radio" value="false" id ="falseQ4" name="question4" asp-for="CorrectOrNot4">False</label>
             </div>
             <!--If Model is null, ? allows it to display as an empty sting (invisible)-->
-            <p class="answer">@Model?.Answer4</p>
+            <p class="answer">@Model?.UserAnswer4</p>
             <br />
         </div>
 
         <div class="form-group">
-            <label asp-for="Question5">5. Approximately how much global electricity output is produced from renewable sources?</label><br />
+            <label asp-for="CorrectOrNot5">5. Approximately how much global electricity output is produced from renewable sources?</label><br />
             <div class="radio">
-                <label><input type="radio" value="10" id="10" name="question5" checked asp-for="Question5">10</label>
+                <label><input type="radio" value="10" id="10" name="question5" checked asp-for="CorrectOrNot5">10</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="5" id="5" name="question5" asp-for="Question5">5</label>
+                <label><input type="radio" value="5" id="5" name="question5" asp-for="CorrectOrNot5">5</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="20" id="20" name="question5" asp-for="Question5">20</label>
+                <label><input type="radio" value="20" id="20" name="question5" asp-for="CorrectOrNot5">20</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="1" id="1" name="question5" asp-for="Question5">1</label>
+                <label><input type="radio" value="1" id="1" name="question5" asp-for="CorrectOrNot5">1</label>
             </div>
             <!--If Model is null, ? allows it to display as an empty sting (invisible)-->
-            <p class="answer">@Model?.Answer5</p>
+            <p class="answer">@Model?.UserAnswer5</p>
             <br />
         </div>
 
         <div class="form-group">
-            <label asp-for="Question6">6. About how much money do you save by replacing a single incandescent light bulb with a compact fluorescent light (CFL)?</label><br />
+            <label asp-for="CorrectOrNot6">6. About how much money do you save by replacing a single incandescent light bulb with a compact fluorescent light (CFL)?</label><br />
             <div class="radio">
-                <label><input type="radio" value="5" id="5Q6" name="question6" checked asp-for="Question6">5</label>
+                <label><input type="radio" value="5" id="5Q6" name="question6" checked asp-for="CorrectOrNot6">5</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="10" id="10Q6" name="question6" asp-for="Question6">10</label>
+                <label><input type="radio" value="10" id="10Q6" name="question6" asp-for="CorrectOrNot6">10</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="30" id="30" name="question6" asp-for="Question6">30</label>
+                <label><input type="radio" value="30" id="30" name="question6" asp-for="CorrectOrNot6">30</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="15" id="15" name="question6" asp-for="Question6">15</label>
+                <label><input type="radio" value="15" id="15" name="question6" asp-for="CorrectOrNot6">15</label>
             </div>
             <!--If Model is null, ? allows it to display as an empty sting (invisible)-->
-            <p class="answer">@Model?.Answer6</p>
+            <p class="answer">@Model?.UserAnswer6</p>
             <br />
         </div>
 
         <div class="form-group">
-            <label asp-for="Question7">7. It is better to leave a lamp with a compact fluorescent light on than to turn it on and off several times a day.</label><br />
+            <label asp-for="CorrectOrNot7">7. It is better to leave a lamp with a compact fluorescent light on than to turn it on and off several times a day.</label><br />
             <div class="radio">
-                <label><input type="radio" value="true" id="trueQ7" name="question7" checked asp-for="Question7">True</label>
+                <label><input type="radio" value="true" id="trueQ7" name="question7" checked asp-for="CorrectOrNot7">True</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="false" id="falseQ7" name="question7" asp-for="Question7">False</label>
+                <label><input type="radio" value="false" id="falseQ7" name="question7" asp-for="CorrectOrNot7">False</label>
             </div>
             <!--If Model is null, ? allows it to display as an empty sting (invisible)-->
-            <p class="answer">@Model?.Answer7</p>
+            <p class="answer">@Model?.UserAnswer7</p>
             <br />
         </div>
 
         <div class="form-group">
-            <label asp-for="Question8">8. During a long trip, you conserve more fuel by driving fast and getting to your destination sooner than you do by going the speed limit.</label><br />
+            <label asp-for="CorrectOrNot8">8. During a long trip, you conserve more fuel by driving fast and getting to your destination sooner than you do by going the speed limit.</label><br />
             <div class="radio">
-                <label><input type="radio" value="true" id="trueQ8" name="question8" checked asp-for="Question8">True</label>
+                <label><input type="radio" value="true" id="trueQ8" name="question8" checked asp-for="CorrectOrNot8">True</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="false" id="falseQ8" name="question8" asp-for="Question8">False</label>
+                <label><input type="radio" value="false" id="falseQ8" name="question8" asp-for="CorrectOrNot8">False</label>
             </div>
             <!--If Model is null, ? allows it to display as an empty sting (invisible)-->
-            <p class="answer">@Model?.Answer8</p>
+            <p class="answer">@Model?.UserAnswer8</p>
             <br />
         </div>
 
         <div class="form-group">
-            <label asp-for="Question9">9. Dropping the thermostat from 70 to 68 degrees (21.1 to 20 degrees celsius) saves you about how much percent on your heating costs?</label><br />
+            <label asp-for="CorrectOrNot9">9. Dropping the thermostat from 70 to 68 degrees (21.1 to 20 degrees celsius) saves you about how much percent on your heating costs?</label><br />
             <div class="radio">
-                <label><input type="radio" value="10" id="10Q9" name="question9" checked asp-for="Question9">10</label>
+                <label><input type="radio" value="10" id="10Q9" name="question9" checked asp-for="CorrectOrNot9">10</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="5" id="5Q9" name="question9" asp-for="Question9">5</label>
+                <label><input type="radio" value="5" id="5Q9" name="question9" asp-for="CorrectOrNot9">5</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="15" id="15Q9" name="question9" asp-for="Question9">15</label>
+                <label><input type="radio" value="15" id="15Q9" name="question9" asp-for="CorrectOrNot9">15</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="2" id="2Q9" name="question9" asp-for="Question9">2</label>
+                <label><input type="radio" value="2" id="2Q9" name="question9" asp-for="CorrectOrNot9">2</label>
             </div>
             <!--If Model is null, ? allows it to display as an empty sting (invisible)-->
-            <p class="answer">@Model?.Answer9</p>
+            <p class="answer">@Model?.UserAnswer9</p>
             <br />
         </div>
 
         <div class="form-group">
-            <label asp-for="Question10">10. Which of the following is an alternative material for making paper?</label><br />
+            <label asp-for="CorrectOrNot10">10. Which of the following is an alternative material for making paper?</label><br />
             <div class="radio">
-                <label><input type="radio" value="pandaExcrement" id="pandaExcrement" name="question10" checked asp-for="Question10">Panda Excrement</label>
+                <label><input type="radio" value="pandaExcrement" id="pandaExcrement" name="question10" checked asp-for="CorrectOrNot10">Panda Excrement</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="sheepskin" id="sheepskin" name="question10" asp-for="Question10">Sheepskin</label>
+                <label><input type="radio" value="sheepskin" id="sheepskin" name="question10" asp-for="CorrectOrNot10">Sheepskin</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="hemp" id="hemp" name="question10" asp-for="Question10">Hemp</label>
+                <label><input type="radio" value="hemp" id="hemp" name="question10" asp-for="CorrectOrNot10">Hemp</label>
             </div>
             <div class="radio">
-                <label><input type="radio" value="all" id="all" name="question10" asp-for="Question10">All the above</label>
+                <label><input type="radio" value="all" id="all" name="question10" asp-for="CorrectOrNot10">All the above</label>
             </div>
             <!--If Model is null, ? allows it to display as an empty sting (invisible)-->
-            <p class="answer">@Model?.Answer10</p>
+            <p class="answer">@Model?.UserAnswer10</p>
             <br />
         </div>
 

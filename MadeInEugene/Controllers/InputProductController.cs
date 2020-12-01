@@ -33,17 +33,23 @@ namespace MadeInEugene.Controllers
             return View(product);
         }
 
-        public IActionResult Products(Product product)
+        public IActionResult Products()
         {
             var products = context.Products.Include(product => product.Company).ToList<Product>();
             return View(products);
         }
 
+
         [HttpGet]
         public IActionResult Edit(int id)
         {
-            var review = context.Products.Find(id);
-            return View(review);
+            //var product = context.Products.Find(id);
+            //needed to include other model Company to have its name and contact info show up in View
+            var productAndCompany = context.Products
+                .Include(product => product.Company)
+                .Where(product => product.ProductId == id)
+                .First();
+            return View(productAndCompany);
         }
 
         [HttpPost]

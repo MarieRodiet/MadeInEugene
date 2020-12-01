@@ -5,6 +5,8 @@ VisualStudioVersion = 16.0.808.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MadeInEugene", "MadeInEugene\MadeInEugene.csproj", "{875BDC4C-9FBD-46A9-AC97-E96B864736AE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tests", "Tests\Tests.csproj", "{04D805E6-E6B2-4748-8B9B-93666181BC8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{875BDC4C-9FBD-46A9-AC97-E96B864736AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{875BDC4C-9FBD-46A9-AC97-E96B864736AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{875BDC4C-9FBD-46A9-AC97-E96B864736AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{04D805E6-E6B2-4748-8B9B-93666181BC8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04D805E6-E6B2-4748-8B9B-93666181BC8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04D805E6-E6B2-4748-8B9B-93666181BC8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04D805E6-E6B2-4748-8B9B-93666181BC8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

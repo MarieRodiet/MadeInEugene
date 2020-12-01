@@ -1,26 +1,30 @@
 ﻿<Properties StartupConfiguration="{875BDC4C-9FBD-46A9-AC97-E96B864736AE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MadeInEugene/Views/Shared/_Layout.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Tests/QuizTests.cs">
     <Files>
-      <File FileName="MadeInEugene/Views/InputProduct/Products.cshtml" Line="1" Column="1" />
-      <File FileName="MadeInEugene/Controllers/InputProductController.cs" Line="1" Column="1" />
-      <File FileName="MadeInEugene/Views/InputProduct/Edit.cshtml" />
-      <File FileName="MadeInEugene/Views/Shared/_Layout.cshtml" Line="1" Column="1" />
+      <File FileName="MadeInEugene/Views/Quiz/Index.cshtml" Line="172" Column="104" />
+      <File FileName="MadeInEugene/Models/QuizModel.cs" Line="1" Column="1" />
+      <File FileName="Tests/QuizTests.cs" Line="17" Column="41" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MadeInEugene" expanded="True">
             <Node name="MadeInEugene" expanded="True">
-              <Node name="Controllers" expanded="True" />
+              <Node name="Dependencies" expanded="True" />
+              <Node name="Models" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="InputProduct" expanded="True" />
-                <Node name="Search" expanded="True" />
-                <Node name="Shared" expanded="True">
-                  <Node name="_Layout.cshtml" selected="True" />
-                </Node>
+                <Node name="Quiz" expanded="True" />
               </Node>
             </Node>
+            <Node name="Tests" expanded="True">
+              <Node name="QuizTests.cs" selected="True" />
+            </Node>
           </Node>
+        </State>
+      </Pad>
+      <Pad Id="MonoDevelop.UnitTesting.TestPad">
+        <State name="__root__">
+          <Node name="MadeInEugene" expanded="True" selected="True" />
         </State>
       </Pad>
     </Pads>
