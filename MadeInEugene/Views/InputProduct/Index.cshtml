@@ -10,7 +10,7 @@
 <div class="container">
     <form asp-action="Index" method="post" class="container form-horizontal">
         <!--line 21 allows for all ErrorMessages from the model to be listed together-->
-        <div asp-validation-summary="All"></div>
+        <div asp-validation-summary="All" style="background-color: red"></div>
 
         <div class="row">
             <label asp-for="NameOfProduct" class="control-label col-sm-3">Name Of Product</label>

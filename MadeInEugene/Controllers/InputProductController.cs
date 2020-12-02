@@ -13,7 +13,7 @@ namespace MadeInEugene.Controllers
     {
         IProductRepository repo;
 
-        public InputProductController(ProductRepository r)
+        public InputProductController(IProductRepository r)
         {
             repo = r;
         }
@@ -27,7 +27,8 @@ namespace MadeInEugene.Controllers
         [HttpPost]
         public IActionResult Index(Product product)
         {
-            repo.AddProduct(product);
+            if (ModelState.IsValid)
+                repo.AddProduct(product);
             return View(product);
         }
 

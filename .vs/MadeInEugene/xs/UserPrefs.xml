@@ -1,13 +1,13 @@
 ﻿<Properties StartupConfiguration="{875BDC4C-9FBD-46A9-AC97-E96B864736AE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MadeInEugene/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MadeInEugene/Models/ProductsCompaniesDbContext.cs">
     <Files>
-      <File FileName="MadeInEugene/Repositories/ProductRepository.cs" Line="27" Column="1" />
-      <File FileName="MadeInEugene/Controllers/InputProductController.cs" Line="47" Column="63" />
-      <File FileName="MadeInEugene/Repositories/IProductRepository.cs" Line="17" Column="48" />
-      <File FileName="MadeInEugene/Models/ProductsCompaniesDbContext.cs" Line="34" Column="19" />
+      <File FileName="MadeInEugene/Repositories/IProductRepository.cs" Line="1" Column="1" />
+      <File FileName="MadeInEugene/Repositories/ProductRepository.cs" Line="43" Column="1" />
+      <File FileName="MadeInEugene/Controllers/InputProductController.cs" Line="32" Column="13" />
+      <File FileName="MadeInEugene/Repositories/FakeProductRepository.cs" Line="49" Column="6" />
+      <File FileName="Tests/ProductTest.cs" Line="20" Column="1" />
       <File FileName="MadeInEugene/Models/Product.cs" Line="1" Column="1" />
-      <File FileName="MadeInEugene/Views/InputProduct/Index.cshtml" Line="1" Column="1" />
-      <File FileName="MadeInEugene/Startup.cs" Line="1" Column="1" />
+      <File FileName="MadeInEugene/Models/ProductsCompaniesDbContext.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -15,10 +15,16 @@
           <Node name="MadeInEugene" expanded="True">
             <Node name="MadeInEugene" expanded="True">
               <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="ProductsCompaniesDbContext.cs" selected="True" />
+              </Node>
+              <Node name="Properties" expanded="True" />
+              <Node name="Repositories" expanded="True" />
               <Node name="Views" expanded="True">
                 <Node name="InputProduct" expanded="True" />
               </Node>
-              <Node name="Startup.cs" selected="True" />
+              <Node name="wwwroot" expanded="True" />
+              <Node name="appsettings.json" expanded="True" />
             </Node>
             <Node name="Tests" expanded="True" />
           </Node>
