@@ -51,20 +51,9 @@ button.accept-policy {
   line-height: inherit;
 }
 
-/* Sticky footer styles
--------------------------------------------------- */
-html {
-  position: relative;
-  min-height: 100%;
-}
+table {
 
-body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
-}
 
-h1 {
-    text-align: center
 }
 
 

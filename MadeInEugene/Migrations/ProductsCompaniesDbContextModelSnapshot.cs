@@ -3,6 +3,7 @@ using System;
 using MadeInEugene.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace MadeInEugene.Migrations
@@ -14,21 +15,24 @@ namespace MadeInEugene.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
+                .UseIdentityColumns()
+                .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.0");
 
             modelBuilder.Entity("MadeInEugene.Models.Company", b =>
                 {
                     b.Property<int>("CompanyId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
+
+                    b.Property<string>("ContactInfo")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("NameOfCompany")
                         .IsRequired()
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("contactInfo")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("CompanyId");
 
@@ -38,14 +42,14 @@ namespace MadeInEugene.Migrations
                         new
                         {
                             CompanyId = -1,
-                            NameOfCompany = "Nancy's",
-                            contactInfo = "(541) 689-2911"
+                            ContactInfo = "(541) 689-2911",
+                            NameOfCompany = "Nancy's"
                         },
                         new
                         {
                             CompanyId = -2,
-                            NameOfCompany = "Surata Soyfoods Inc",
-                            contactInfo = "(541) 485-6990"
+                            ContactInfo = "(541) 485-6990",
+                            NameOfCompany = "Surata Soyfoods Inc"
                         });
                 });
 
@@ -53,21 +57,23 @@ namespace MadeInEugene.Migrations
                 {
                     b.Property<int>("ProductId")
                         .ValueGeneratedOnAdd()
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int")
+                        .UseIdentityColumn();
 
                     b.Property<int?>("CompanyId")
-                        .HasColumnType("INTEGER");
+                        .HasColumnType("int");
 
                     b.Property<string>("NameOfProduct")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("Rating")
-                        .HasColumnType("INTEGER");
+                    b.Property<int?>("Rating")
+                        .IsRequired()
+                        .HasColumnType("int");
 
                     b.Property<string>("Review")
                         .IsRequired()
-                        .HasColumnType("TEXT");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ProductId");
 

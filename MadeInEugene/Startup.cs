@@ -29,11 +29,15 @@ namespace MadeInEugene
         {
             services.AddControllersWithViews();
             services.AddTransient<IProductRepository, ProductRepository>();
-            if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
+            //comment out the if statement when you want to deploy the db to azure
+            //azure can't use the sqlite migration, so we force it to use sqlserver with the
+            //connection string provided on the azure database website
+            /*if (RuntimeInformation.IsOSPlatform(OSPlatform.Windows))
             {
-                //Assuming that SQL Server is installed on Windows
+                //Assuming that SQL Server is installed on Windows*/
                 services.AddDbContext<ProductsCompaniesDbContext>(options =>
-                options.UseSqlServer(Configuration["ConnectionStrings:SQLServerConnection"]));
+                options.UseSqlServer(Configuration["ConnectionStrings:AzureSQLServerConnection"]));
+            /*
 
             }
             
@@ -41,7 +45,7 @@ namespace MadeInEugene
             {
                 services.AddDbContext<ProductsCompaniesDbContext>(options =>
                     options.UseSqlite(Configuration["ConnectionStrings:SQLiteConnection"]));
-            }
+            }*/
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

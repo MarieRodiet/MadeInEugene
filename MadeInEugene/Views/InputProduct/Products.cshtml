@@ -8,34 +8,34 @@
 </div>
 
 <div>
-    <table>
-        <thead>
-            <tr>
+    <table class="table table-hover" width="100%">
+        <thead class="container">
+            <tr class="row">
                 <th class="col-sm-2">Product Name</th>
                 <th class="col-sm-1">Rating</th>
-                <th class="col-sm-2">Review</th>
+                <th class="col-sm-3">Review</th>
                 <th class="col-sm-2">Company</th>
                 <th class="col-sm-2">Contact Info</th>
-                <th class="col-sm-1"></th>
+                <th class="col-sm-2"></th>
             </tr>
         </thead>
-        <tbody>
+        <tbody class="container">
             @foreach(Product product in Model)
             {
-            <tr>
+            <tr class="row">
                 <td class="col-sm-2">
                     @product.NameOfProduct
                 </td>
                 <td class="col-sm-1">
                     @product.Rating
                 </td>
-                <td class="col-sm-2">
+                <td class="col-sm-3">
                     @product.Review
                 </td>
                 <td class="col-sm-2">
                     @product.Company.NameOfCompany
                 </td>
-                <td class="col-sm-1">
+                <td class="col-sm-2">
                     @product.Company.ContactInfo
                 </td>
                 <td>

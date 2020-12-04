@@ -10,10 +10,10 @@ namespace MadeInEugene.Migrations
                 name: "Companies",
                 columns: table => new
                 {
-                    CompanyId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    NameOfCompany = table.Column<string>(type: "TEXT", nullable: false),
-                    contactInfo = table.Column<string>(type: "TEXT", nullable: false)
+                    CompanyId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    NameOfCompany = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ContactInfo = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -24,12 +24,12 @@ namespace MadeInEugene.Migrations
                 name: "Products",
                 columns: table => new
                 {
-                    ProductId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    NameOfProduct = table.Column<string>(type: "TEXT", nullable: false),
-                    Rating = table.Column<int>(type: "INTEGER", nullable: false),
-                    Review = table.Column<string>(type: "TEXT", nullable: false),
-                    CompanyId = table.Column<int>(type: "INTEGER", nullable: true)
+                    ProductId = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    NameOfProduct = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Rating = table.Column<int>(type: "int", nullable: false),
+                    Review = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CompanyId = table.Column<int>(type: "int", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -44,13 +44,13 @@ namespace MadeInEugene.Migrations
 
             migrationBuilder.InsertData(
                 table: "Companies",
-                columns: new[] { "CompanyId", "NameOfCompany", "contactInfo" },
-                values: new object[] { -1, "Nancy's", "(541) 689-2911" });
+                columns: new[] { "CompanyId", "ContactInfo", "NameOfCompany" },
+                values: new object[] { -1, "(541) 689-2911", "Nancy's" });
 
             migrationBuilder.InsertData(
                 table: "Companies",
-                columns: new[] { "CompanyId", "NameOfCompany", "contactInfo" },
-                values: new object[] { -2, "Surata Soyfoods Inc", "(541) 485-6990" });
+                columns: new[] { "CompanyId", "ContactInfo", "NameOfCompany" },
+                values: new object[] { -2, "(541) 485-6990", "Surata Soyfoods Inc" });
 
             migrationBuilder.CreateIndex(
                 name: "IX_Products_CompanyId",
