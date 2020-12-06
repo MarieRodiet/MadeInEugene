@@ -3,6 +3,31 @@
     ViewData["Title"] = "List of Products";
 }
 
+<h1 class="display-4">Filter Products</h1>
+Enter a Product Name:
+<form method="post" class="container">
+    <div class="row p-2">
+        <label for="nameOfProduct" class="control-label col-md-1">Name Of Product</label>
+        <input name="nameOfProduct" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <button type="submit" class="form-control btn btn-success col-2">Submit</button>
+        <a asp-action="Products" class="btn btn-secondary col-3">Reset</a>
+    </div>
+</form>
+
+Enter the Name of a Company:
+<form method="post" class="container">
+    <div class="row p-2">
+        <label for="companyName" class="control-label col-md-1">Name Of Company</label>
+        <input name="companyName" class="form-control col-md-6" />
+    </div>
+    <div class="row p-2">
+        <button type="submit" class="form-control btn btn-success col-2">Submit</button>
+        <a asp-action="Products" class="btn btn-secondary col-3">Reset</a>
+    </div>
+</form>
+
 <div class="text-center p-3 m-3">
     <h1>View a list of Products Made In Eugene! </h1>
 </div>
@@ -20,30 +45,30 @@
             </tr>
         </thead>
         <tbody class="container">
-            @foreach(Product product in Model)
+            @foreach (Product product in Model)
             {
-            <tr class="row">
-                <td class="col-sm-2">
-                    @product.NameOfProduct
-                </td>
-                <td class="col-sm-1">
-                    @product.Rating
-                </td>
-                <td class="col-sm-3">
-                    @product.Review
-                </td>
-                <td class="col-sm-2">
-                    @product.Company.NameOfCompany
-                </td>
-                <td class="col-sm-2">
-                    @product.Company.ContactInfo
-                </td>
-                <td>
+                <tr class="row">
+                    <td class="col-sm-2">
+                        @product.NameOfProduct
+                    </td>
+                    <td class="col-sm-1">
+                        @product.Rating
+                    </td>
+                    <td class="col-sm-3">
+                        @product.Review
+                    </td>
+                    <td class="col-sm-2">
+                        @product.Company.NameOfCompany
+                    </td>
+                    <td class="col-sm-2">
+                        @product.Company.ContactInfo
+                    </td>
+                    <td>
                         <a asp-controller="InputProduct" asp-action="Edit" asp-route-id="@product.ProductId" class="btn btn-primary active" role="button">Edit</a>
                         <a asp-controller="InputProduct" asp-action="Delete" asp-route-id="@product.ProductId" class="btn btn-danger active" role="button">Delete</a>
-                </td>
+                    </td>
 
-            </tr>
+                </tr>
             }
         </tbody>
     </table>

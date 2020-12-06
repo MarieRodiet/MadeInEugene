@@ -49,7 +49,7 @@ namespace MadeInEugene
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ProductsCompaniesDbContext context)
         {
             if (env.IsDevelopment())
             {
@@ -74,6 +74,12 @@ namespace MadeInEugene
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+
+            //TODO:Call the seed method
+            //need to add context as a parameter to line 52
+            //this is a static method
+            //SeedData is a class, and the dot is calling the method Seed within that class
+            SeedData.Seed(context);
         }
     }
 }

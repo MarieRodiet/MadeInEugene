@@ -2039,7 +2039,8 @@
         "dependencies": {
           "Microsoft.EntityFrameworkCore": "5.0.0",
           "Microsoft.EntityFrameworkCore.SqlServer": "5.0.0",
-          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.0"
+          "Microsoft.EntityFrameworkCore.Sqlite": "5.0.0",
+          "Microsoft.Extensions.DependencyInjection": "5.0.0"
         },
         "compile": {
           "bin/placeholder/MadeInEugene.dll": {}

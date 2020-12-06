@@ -39,6 +39,27 @@ namespace MadeInEugene.Controllers
             return View(products);
         }
 
+        [HttpPost]
+        public IActionResult Products(string nameOfProduct, string companyName)
+        {
+            List<Product> products = null;
+
+            if (nameOfProduct != null)
+            {
+                products = (from r in repo.Products
+                           where r.NameOfProduct == nameOfProduct
+                           select r).ToList();
+                
+            }
+            else if (companyName != null)
+            {
+                products = (from r in repo.Products
+                           where r.Company.NameOfCompany == companyName
+                           select r).ToList();
+            }
+            return View(products);
+        }
+
 
         [HttpGet]
         public IActionResult Edit(int id)

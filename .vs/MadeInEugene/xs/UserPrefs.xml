@@ -1,17 +1,29 @@
 ﻿<Properties StartupConfiguration="{875BDC4C-9FBD-46A9-AC97-E96B864736AE}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="MadeInEugene/Startup.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="MadeInEugene/Models/QuizModel.cs">
     <Files>
-      <File FileName="MadeInEugene/Startup.cs" Line="30" Column="48" />
-      <File FileName="MadeInEugene/appsettings.json" />
-      <File FileName="MadeInEugene/Controllers/InputProductController.cs" />
-      <File FileName="MadeInEugene/Properties/PublishProfiles/MarieRodietSite - Web Deploy.pubxml" />
-      <File FileName="MadeInEugene/Properties/PublishProfiles/MadeInEugene - Web Deploy.pubxml" />
+      <File FileName="MadeInEugene/Views/InputProduct/Products.cshtml" Line="30" Column="1" />
+      <File FileName="MadeInEugene/Controllers/InputProductController.cs" Line="52" Column="17" />
+      <File FileName="MadeInEugene/Repositories/ProductRepository.cs" Line="1" Column="1" />
+      <File FileName="MadeInEugene/Controllers/QuizController.cs" Line="1" Column="1" />
+      <File FileName="MadeInEugene/Views/Quiz/Index.cshtml" Line="1" Column="1" />
+      <File FileName="MadeInEugene/Models/QuizModel.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="MadeInEugene" expanded="True">
-            <Node name="MadeInEugene" expanded="True" selected="True" />
+            <Node name="MadeInEugene" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="QuizModel.cs" selected="True" />
+              </Node>
+              <Node name="Repositories" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Home" expanded="True" />
+                <Node name="InputProduct" expanded="True" />
+                <Node name="Quiz" expanded="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
